@@ -1,0 +1,13 @@
+﻿2019-08-01T21:04:59.7111944+03:00;VSTestExecutionThread;Info;SpecFlow+Runner execution started
+2019-08-01T21:04:59.7111944+03:00;VSTestExecutionThread;Info;SpecFlow+Runner 3.0.377 in Framework clr40 in x86 mode execution started
+2019-08-01T21:04:59.7111944+03:00;VSTestExecutionThread;Info;TestAdapter Location: C:\Users\vovas\source\repos\MyFramework\MyFramework\bin\Debug\TechTalk.SpecRun.VisualStudio.TestAdapter.dll
+2019-08-01T21:05:00.3584642+03:00;VSTestExecutionThread;Info;SpecRun: running tests in C:\Users\vovas\source\repos\MyFramework\MyFramework\bin\Debug\MyFramework.dll
+2019-08-01T21:05:00.3594633+03:00;VSTestExecutionThread;Info;Output folder configured to "C:\Users\vovas\source\repos\MyFramework\TestResults" (default)
+2019-08-01T21:05:00.3594633+03:00;VSTestExecutionThread;Info;Profile: 
+2019-08-01T21:05:00.4931047+03:00;VSTestExecutionThread;Info;Log file path: C:\Users\vovas\source\repos\MyFramework\TestResults\Unnamed project__2019-08-01T210500.log
+2019-08-01T21:05:00.5023890+03:00;VSTestExecutionThread;Error;Invalid project license: The test assembly name must contain the licensed project name
+2019-08-01T21:05:00.5280119+03:00;VSTestExecutionThread;Info;SpecFlow+Runner Evaluation Mode: Please purchase at http://www.specflow.org/plus to remove test execution delay.
+2019-08-01T21:05:00.5539415+03:00;Thread#15;Info;Checking license
+2019-08-01T21:05:00.5569338+03:00;Thread#15;Error;Invalid project license: The test assembly name must contain the licensed project name
+2019-08-01T21:05:00.5609287+03:00;Thread#15;Error;Invalid project license: The test assembly name must contain the licensed project name
+2019-08-01T21:05:00.5858555+03:00;Thread#15;Info;Evaluation mode: test execution starts in 9 seconds... (this delay is removed in the registered version)

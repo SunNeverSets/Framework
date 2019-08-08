@@ -1,0 +1,48 @@
+﻿2019-08-01T20:52:13.7257993+03:00;VSTestExecutionThread;Info;SpecFlow+Runner execution started
+2019-08-01T20:52:13.7257993+03:00;VSTestExecutionThread;Info;SpecFlow+Runner 3.0.377 in Framework clr40 in x86 mode execution started
+2019-08-01T20:52:13.7257993+03:00;VSTestExecutionThread;Info;TestAdapter Location: C:\Users\vovas\source\repos\MyFramework\MyFramework\bin\Debug\TechTalk.SpecRun.VisualStudio.TestAdapter.dll
+2019-08-01T20:52:13.8404909+03:00;VSTestExecutionThread;Info;SpecRun: running tests in C:\Users\vovas\source\repos\MyFramework\MyFramework\bin\Debug\MyFramework.dll
+2019-08-01T20:52:13.8404909+03:00;VSTestExecutionThread;Info;Output folder configured to "C:\Users\vovas\source\repos\MyFramework\TestResults" (default)
+2019-08-01T20:52:13.8404909+03:00;VSTestExecutionThread;Info;Profile: 
+2019-08-01T20:52:13.8624051+03:00;VSTestExecutionThread;Info;Log file path: C:\Users\vovas\source\repos\MyFramework\TestResults\Unnamed project__2019-08-01T205213.log
+2019-08-01T20:52:13.8643987+03:00;VSTestExecutionThread;Error;Invalid project license: The test assembly name must contain the licensed project name
+2019-08-01T20:52:13.8703837+03:00;VSTestExecutionThread;Info;SpecFlow+Runner Evaluation Mode: Please purchase at http://www.specflow.org/plus to remove test execution delay.
+2019-08-01T20:52:13.8763949+03:00;Thread#17;Info;Checking license
+2019-08-01T20:52:13.8763949+03:00;Thread#17;Error;Invalid project license: The test assembly name must contain the licensed project name
+2019-08-01T20:52:13.8773652+03:00;Thread#17;Error;Invalid project license: The test assembly name must contain the licensed project name
+2019-08-01T20:52:13.8914345+03:00;Thread#17;Info;Evaluation mode: test execution starts in 5 seconds... (this delay is removed in the registered version)
+2019-08-01T20:52:18.8928003+03:00;Thread#17;Info;Evaluation delay finished.
+2019-08-01T20:52:18.8947889+03:00;Thread#17;Info;License check completed
+2019-08-01T20:52:18.8957767+03:00;Thread#17;Info;starting test run
+2019-08-01T20:52:18.9276694+03:00;Thread#17;Info;Discovering target: Default
+2019-08-01T20:52:18.9286987+03:00;Thread#17;Info;Discovering tests from assembly: C:\Users\vovas\source\repos\MyFramework\MyFramework\bin\Debug\MyFramework.dll
+2019-08-01T20:52:19.0631254+03:00:Appdomain Disposed
+2019-08-01T20:52:19.0631254+03:00;Thread#17;Info;Discovered tests from assembly: C:\Users\vovas\source\repos\MyFramework\MyFramework\bin\Debug\MyFramework.dll
+2019-08-01T20:52:19.0644521+03:00:Test Suite Dump
+2019-08-01T20:52:19.0681118+03:00:#0: Unnamed project/ - 
+2019-08-01T20:52:19.0681118+03:00:End: Test Suite Dump
+2019-08-01T20:52:19.1179786+03:00:Thread#0:Scheduler: get next test for thread 0
+2019-08-01T20:52:19.1230006+03:00:Thread#:Scheduler: at the end of normal test queue
+2019-08-01T20:52:19.1230006+03:00:Thread#0:Scheduler: enumerator for thread is at end
+2019-08-01T20:52:19.1232878+03:00:Thread#0:Scheduler: No more tests for thread
+2019-08-01T20:52:19.1273383+03:00:Trying to cancel thread
+2019-08-01T20:52:19.1273383+03:00:Thread cancelled
+2019-08-01T20:52:19.1439415+03:00:Thread#-1:Scheduler: get next test for thread -1
+2019-08-01T20:52:19.1439415+03:00:Thread#:Scheduler: at the end of normal test queue
+2019-08-01T20:52:19.1439415+03:00:Thread#-1:Scheduler: enumerator for thread is at end
+2019-08-01T20:52:19.1464216+03:00;Thread#17;Info;test run finished
+2019-08-01T20:52:19.1469347+03:00;Thread#17;Info;publishing test results
+2019-08-01T20:52:19.1928059+03:00;Thread#17;Info;test results published
+2019-08-01T20:52:19.1928059+03:00;Thread#17;Info;generating reports
+2019-08-01T20:52:19.2875514+03:00;Thread#17;Info;Starting external report generation process
+2019-08-01T20:52:20.6321142+03:00;Thread#17;Error;Could not generate test run result reports. An error occurred in the generator.
+2019-08-01T20:52:20.6321142+03:00;Thread#17;Error;External program returned exit code '-2'
+2019-08-01T20:52:20.6329348+03:00;Thread#17;Info;Failed generating reports
+2019-08-01T20:52:20.6409328+03:00:Total: 0
+2019-08-01T20:52:20.6429271+03:00:Succeeded: 0
+2019-08-01T20:52:20.6438970+03:00:Ignored: 0
+2019-08-01T20:52:20.6438970+03:00:Pending: 0
+2019-08-01T20:52:20.6450416+03:00:Skipped: 0
+2019-08-01T20:52:20.6458913+03:00:Failed: 0
+2019-08-01T20:52:20.6558924+03:00;VSTestExecutionThread;Info;Adding attachments to VSTest
+========== End of log file ==========

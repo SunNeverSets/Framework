@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs
+/MyFramework/obj
+/MyFramework/bin/Debug
+/MyFramework.Infrastructure/obj
+/MyFramework.Infrastructure/bin/Debug
