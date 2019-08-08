@@ -21,7 +21,7 @@ namespace MyFramework
         public void TestSubmit()
         {
             var main = new ComplexLIandHYS(_driver);
-            Dictionary<string, string> dict = new Dictionary<string, string>
+            var dict = new Dictionary<string, string>
             {
                 ["text"] = main.loremIpsum(),
                 ["name"] = "Vova",
@@ -46,7 +46,7 @@ namespace MyFramework
         }
 
         [TestMethod]
-        public void SearchNews()
+        public void TestIsSearchingArticle()
         {
             //Arrange
             _driver.Navigate().GoToUrl("https://www.bbc.com/");
@@ -64,7 +64,7 @@ namespace MyFramework
 
         [TestMethod]
 
-        public void HaveYourSayLink()
+        public void TestIsItHaveYourSayPage()
         {
             //Arrange
             _driver.Navigate().GoToUrl("https://www.bbc.com/");
@@ -74,7 +74,7 @@ namespace MyFramework
             //Act
             var haveyoursay = new HaveYourSayPage(_driver);
             haveyoursay.News_HaveYourSay();
-            
+
             //Assert
             var resultText = new HaveYourSayPage(_driver);
             Assert.AreEqual(searchText, resultText.SearchText.Text);
@@ -87,7 +87,7 @@ namespace MyFramework
         }
 
         [TestMethod]
-        public void LoremIpsumTest()
+        public void TestLengthOfGeneratedText()
         {
             //Arrange
             _driver.Navigate().GoToUrl("https://www.lipsum.com/");
@@ -100,31 +100,34 @@ namespace MyFramework
             var generatedText = lorIps.GeneratedText.Text;
             string newText = generatedText.Substring(0, generatedText.Length - 1);
             Console.WriteLine(newText);
+            var expectedResult = 140;
 
             //Assert
-            Assert.IsNotNull(newText);
+            Assert.AreEqual(expectedResult, newText.Length);
         }
 
         [TestMethod]
-        public void News()
+        public void TestBusinessTitle()
         {
             //Arrange
             _driver.Navigate().GoToUrl("https://www.bbc.com/news");
             _driver.Manage().Window.Maximize();
-            
+
             //Act
             var newsPage = new NewsPage(_driver);
+            var ExpectedResult = "Business - BBC News";
             newsPage.BusinessLink.Click();
 
             //Assert
+            Assert.AreEqual(ExpectedResult, _driver.Title);
         }
 
         [TestMethod]
-        public void Test()
+        public void TestErrorNameField()
         {
             //Arrange
             var main = new ComplexLIandHYS(_driver);
-            Dictionary<string, string> dict = new Dictionary<string, string>
+            var dict = new Dictionary<string, string>
             {
                 ["text"] = main.loremIpsum(),
                 ["name"] = "",
@@ -132,12 +135,31 @@ namespace MyFramework
                 ["age"] = "22",
                 ["postcode"] = "123456",
             };
-            
+
             //Act
             main.FillForm(dict, false);
-            
+
             //Assert
             Assert.AreEqual(main.GetErrorName(), "Name can't be blank");
+        }
+
+        [TestMethod]
+        public void TestErrorEmailField()
+        {
+            var main = new ComplexLIandHYS(_driver);
+            var dict = new Dictionary<string, string>
+            {
+                ["text"] = main.loremIpsum(),
+                ["name"] = "Volodymyr",
+                ["email"] = "",
+                ["age"] = "22",
+                ["postcode"] = "123456",
+            };
+            //Act
+            main.FillForm(dict, false);
+
+            //Assert
+            Assert.AreEqual(main.GetErrorEmail(), "Email address can't be blank");
         }
     }
 }

@@ -41,10 +41,10 @@ namespace MyFramework.Infrastructure.Pages
         [FindsBy(How = How.XPath, Using = "//button[@class='button']")]
         private IWebElement SubmitButton { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//div[@class=\"input-error-message\"][text()=\"Name can't be blank\"]")]
+        [FindsBy(How = How.XPath, Using = "//div[@class='input-error-message'][contains(text(),'Name')]")]
         private IWebElement ErrorName { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//div[@class='input-error-message'][text()=\"Email adress can't be blank]")]
+        [FindsBy(How = How.XPath, Using = "//div[@class='input-error-message'][contains(text(),'Email')]")]
         private IWebElement ErrorEmail { get; set; }
 
         private void SetPrivacyInfo(Dictionary<string,string> dict)
