@@ -7,37 +7,18 @@ using System.Collections.Generic;
 
 namespace MyFramework
 {
-    [TestClass]
-
-    public class Submit
-    {
-        private IWebDriver _driver;
-        [TestInitialize()]
-        public void TestInitialize()
-        {
-            _driver = new ChromeDriver();
-        }
-        [TestMethod]
-        public void TestSubmit()
-        {
-            var main = new ComplexLIandHYS(_driver);
-            var dict = new Dictionary<string, string>
-            {
-                ["text"] = main.loremIpsum(),
-                ["name"] = "Vova",
-                ["email"] = "vova.shulga2011@gmail.com",
-                ["age"] = "22",
-                ["postcode"] = "123456",
-            };
-
-            //Act
-            main.FillForm(dict, true);
-        }
-    }
+    
     [TestClass]
     public class Tests
     {
         private IWebDriver _driver;
+
+        [TestMethod]
+        public void TEst()
+        {
+            var test = new ComplexLIandHYS(_driver);
+            test.GoToReportForm();
+        }
 
         [TestInitialize()]
         public void TestInitialize()
@@ -73,7 +54,7 @@ namespace MyFramework
 
             //Act
             var haveyoursay = new HaveYourSayPage(_driver);
-            haveyoursay.News_HaveYourSay();
+            haveyoursay.News_StoryPage();
 
             //Assert
             var resultText = new HaveYourSayPage(_driver);
@@ -94,8 +75,8 @@ namespace MyFramework
             _driver.Manage().Window.Maximize();
 
             //Act
-            var lorIps = new LoremIpsum(_driver);
-            lorIps.SetInfo(141);
+            var lorIps = new LoremIpsumPage(_driver);
+            lorIps.GetGeneratedSymbols();
             lorIps.GenerateButton.Click();
             var generatedText = lorIps.GeneratedText.Text;
             string newText = generatedText.Substring(0, generatedText.Length - 1);
@@ -137,7 +118,7 @@ namespace MyFramework
             };
 
             //Act
-            main.FillForm(dict, false);
+            main.MakeScreenOrPressSubmit(dict, false);
 
             //Assert
             Assert.AreEqual(main.GetErrorName(), "Name can't be blank");
@@ -156,7 +137,7 @@ namespace MyFramework
                 ["postcode"] = "123456",
             };
             //Act
-            main.FillForm(dict, false);
+            main.MakeScreenOrPressSubmit(dict, false);
 
             //Assert
             Assert.AreEqual(main.GetErrorEmail(), "Email address can't be blank");

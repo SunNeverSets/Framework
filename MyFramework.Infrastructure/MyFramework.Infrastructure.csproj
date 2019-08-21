@@ -73,9 +73,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\Classes\ComplexLIandHYS.cs" />
+    <Compile Include="Pages\Business Logic Layer\ComplexLIandDYHS.cs" />
+    <Compile Include="Pages\DoYouHaveAStoryPage.cs" />
     <Compile Include="Pages\HomePageBBC.cs" />
-    <Compile Include="Pages\LoremIpsum.cs" />
+    <Compile Include="Pages\LoremIpsumPage.cs" />
     <Compile Include="Pages\HaveYourSayPage.cs" />
     <Compile Include="Pages\NewsPage.cs" />
     <Compile Include="Pages\SearchResultsPage.cs" />

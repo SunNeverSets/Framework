@@ -3,14 +3,9 @@ using SeleniumExtras.PageObjects;
 
 namespace MyFramework.Infrastructure.Pages
 {
-    public class LoremIpsum
+    public class LoremIpsumPage
     {
         private readonly IWebDriver _driver;
-        public LoremIpsum(IWebDriver driver)
-        {
-            _driver = driver;
-            PageFactory.InitElements(_driver, this);
-        }
 
         [FindsBy(How = How.XPath, Using = "//input[@id='amount']")]
         private IWebElement AmountOfSymbols { get; set; }
@@ -23,13 +18,26 @@ namespace MyFramework.Infrastructure.Pages
 
         [FindsBy(How = How.XPath, Using = "//*[@id='lipsum']/p")]
         public IWebElement GeneratedText { get; set; }
+        public LoremIpsumPage(IWebDriver driver)
+        {
+            _driver = driver;
+            PageFactory.InitElements(_driver, this);
+        }
 
-        public void SetInfo(int amountOfSymbols)
+        private void SetInfo(int amountOfSymbols)
         {
             AmountOfSymbols.Click();
             AmountOfSymbols.Clear();
             AmountOfSymbols.SendKeys(amountOfSymbols.ToString());
             RadioButton.Click();
+        }
+        public string GetGeneratedSymbols()
+        {
+            _driver.Navigate().GoToUrl("https://www.lipsum.com/");
+            SetInfo(140);
+            GenerateButton.Click();
+            string s = GeneratedText.Text;
+            return s;
         }
     }
 }
